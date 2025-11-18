@@ -6,7 +6,7 @@ import { FaWhatsapp } from "react-icons/fa";
 const packages = [
   {
     title: "Paket Hemat 20 Porsi (1 Kambing Betina)",
-    image: "image/aqiqah1.jpg",
+    image: "/image/aqiqah1.jpg",
     portions: "20 Porsi",
     goat: "1 Ekor Kambing Betina",
     items: ["Nasi putih", "Kerupuk", "Sendok", "Menu: Semur kambing"],
@@ -14,7 +14,7 @@ const packages = [
   },
   {
     title: "Paket Standar 30 Porsi (1 Kambing Jantan)",
-    image: "image/aqiqah1.jpg",
+    image: "/image/aqiqah1.jpg",
     portions: "30 Porsi",
     goat: "1 Ekor Kambing Jantan",
     items: [
@@ -27,7 +27,7 @@ const packages = [
   },
   {
     title: "Paket Favorit 40 Porsi (1 Kambing Jantan Besar)",
-    image: "image/aqiqah1.jpg",
+    image: "/image/aqiqah1.jpg",
     portions: "40 Porsi",
     goat: "1 Ekor Kambing Jantan – Ukuran Besar",
     items: [
@@ -41,7 +41,7 @@ const packages = [
   },
   {
     title: "Paket Premium 50 Porsi (2 Kambing Betina)",
-    image: "image/aqiqah1.jpg",
+    image: "/image/aqiqah1.jpg",
     portions: "50 Porsi",
     goat: "2 Ekor Kambing Betina",
     items: [
@@ -57,7 +57,7 @@ const packages = [
   },
   {
     title: "Paket Spesial 60 Porsi (2 Kambing Jantan)",
-    image: "image/aqiqah1.jpg",
+    image: "/image/aqiqah1.jpg",
     portions: "60 Porsi",
     goat: "2 Ekor Kambing Jantan",
     items: [
@@ -73,7 +73,7 @@ const packages = [
   },
   {
     title: "Paket Exclusive 80 Porsi (2 Kambing Jantan Besar)",
-    image: "image/aqiqah1.jpg",
+    image: "/image/aqiqah1.jpg",
     portions: "80 Porsi",
     goat: "2 Ekor Kambing Jantan – Ukuran Besar",
     items: [
