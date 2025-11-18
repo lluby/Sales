@@ -9,7 +9,7 @@ import {
 import { FaWhatsapp } from "react-icons/fa";
 import TestimonialCarousel from "./TestimonialCarousel";
 import Navbar from "../components/Navbar";
-import { WA_NUMBER, BRAND } from "../confIg";
+import { WA_NUMBER, BRAND } from "../config";
 import ServiceAreas from "./ServiceAreas";
 
 const Home = () => {

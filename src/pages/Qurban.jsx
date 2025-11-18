@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
-import { WA_NUMBER } from "../confIg";
+import { WA_NUMBER } from "../config";
 import { FaWhatsapp } from "react-icons/fa";
 
 const kambings = [
