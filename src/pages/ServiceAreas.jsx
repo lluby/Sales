@@ -20,7 +20,7 @@ const ServiceAreas = () => {
         <p className="text-gray-600 mb-4 text-lg">
           Berikut adalah daftar daerah yang ada pada layanan Kami
         </p>
-        <div className="flex flex-wrap justify-center gap-3 mt-4">
+        <div className="flex flex-wrap justify-center gap-3 mt-8">
           {areas.map((area, i) => (
             <button
               key={i}

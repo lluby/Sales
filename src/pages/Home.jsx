@@ -4,7 +4,8 @@ import {
   CheckCircle,
   ShoppingCart,
   Gift,
-  Users
+  Users,
+  ArrowRight
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import TestimonialCarousel from "./TestimonialCarousel";
@@ -18,25 +19,46 @@ const Home = () => {
       title: "Kambing Sehat",
       desc: "Kambing sehat, gemuk, dan terawat langsung dari peternakan kami",
       icon: <ShoppingCart className="w-10 h-10 text-sky-500 mb-4" />,
-      link: "/kambing",
     },
     {
       title: "Paket Aqiqah Praktis",
       desc: "Layanan aqiqah lengkap: pemilihan kambing, penyembelihan sesuai syariat, dan masakan siap santap",
       icon: <Gift className="w-10 h-10 text-sky-500 mb-4" />,
-      link: "/aqiqah",
     },
     {
       title: "Kambing Qurban Terbaik",
       desc: "Kambing qurban berkualitas untuk Idul Adha, siap diantar dan disalurkan ke lokasi Anda",
       icon: <Users className="w-10 h-10 text-sky-500 mb-4" />,
+    },
+  ];
+
+  const steps = [
+    {
+      id: 1,
+      img: "/image/kambing1.png",
+      title: "Kambing Super",
+      subtitle: "Best Seller",
+      link: "/kambing",
+    },
+    {
+      id: 2,
+      img: "/image/aqiqah1.jpg",
+      title: "Paket Aqiqah",
+      subtitle: "Praktis & Hemat",
+      link: "/aqiqah",
+    },
+    {
+      id: 3,
+      img: "/image/kambing1.png",
+      title: "Kambing Qurban",
+      subtitle: "Terlaris",
       link: "/qurban",
     },
   ];
 
   const advantages = [
     "Harga bersahabat dengan kualitas terbaik",
-    "Hewan terawat, sehat, dan disembelih sesuai syariat",
+    "Hewan sehat dan disembelih secara syar’i",
     "Masakan higienis dengan cita rasa lezat",
     "Pengantaran tepat waktu ke rumah pelanggan",
   ];
@@ -47,7 +69,6 @@ const Home = () => {
   return (
     <div className="w-full font-sans bg-white text-gray-800">
       <Navbar />
-
       <section className="relative bg-sky-400 text-white text-center py-20 px-6">
         <div className="absolute inset-0 bg-sky-500/60"></div>
         <div className="relative z-10 max-w-5xl mx-auto">
@@ -58,15 +79,14 @@ const Home = () => {
           <p className="text-lg md:text-xl text-sky-50 mb-10">
             {BRAND} hadir dengan layanan profesional dan harga bersahabat untuk kebutuhan kambing sehat, aqiqah, maupun qurban
           </p>
-
           <a
             href={`https://wa.me/${WA_NUMBER}?text=${waText}`}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-3 bg-white text-sky-700 hover:bg-sky-50 px-8 py-4 text-xl font-semibold rounded-full shadow-md transition"
+            className="inline-flex items-center gap-3 bg-white text-sky-700 hover:bg-sky-50 px-6 py-3 text-xl font-semibold rounded-full shadow-md transition"
           >
-            <FaWhatsapp className="text-2xl text-green-600" />
-            Hubungi Kami via WhatsApp
+            <FaWhatsapp className="text-xl text-green-600" />
+            Hubungi Kami
           </a>
         </div>
       </section>
@@ -76,18 +96,61 @@ const Home = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-gray-800">
             Layanan Utama {BRAND}
           </h2>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {categories.map((item, i) => (
-              <Link key={i} to={item.link}>
-                <div className="bg-white rounded-2xl shadow-md hover:shadow-lg p-8 text-center transition flex flex-col items-center cursor-pointer">
-                  {item.icon}
-                  <h3 className="text-2xl font-semibold text-sky-700 mb-3">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600 text-lg">{item.desc}</p>
+            {categories.map((item) => (
+              <div
+                key={item.title}
+                className="bg-white rounded-2xl shadow-md hover:shadow-lg p-8 text-center transition flex flex-col items-center cursor-pointer"
+              >
+                {item.icon}
+                <h3 className="text-2xl font-semibold text-sky-700 mb-3">
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 text-lg">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-10 bg-white text-center">
+        <div className="max-w-6xl mx-auto px-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-gray-800">
+            Paling Banyak Dibeli
+          </h2>
+          <div className="flex flex-wrap justify-center gap-16 mb-2">
+            {steps.map((step) => (
+              <div
+                key={step.id}
+                className="relative bg-white rounded-2xl shadow-md p-6 w-64 flex flex-col items-center text-center"
+              >
+                <div className="absolute -top-3 -left-3 w-10 h-10 bg-sky-200 text-black rounded-full flex items-center justify-center font-bold text-lg shadow-md">
+                  {step.id}
                 </div>
-              </Link>
+                <div className="relative w-full h-42 mb-4 rounded-xl overflow-hidden">
+                  <img
+                    src={step.img}
+                    alt={step.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="font-bold text-[#151E3F] text-xl">
+                  {step.title}
+                </h3>
+                <h4 className="font-semibold text-[#151E3F] mb-2 text-base">
+                  {step.subtitle}
+                </h4>
+                <p className="text-sm text-gray-600 mb-4">
+                  {step.desc}
+                </p>
+                <Link
+                  to={step.link}
+                  className="mt-auto bg-sky-600 text-white px-4 py-2 rounded-xl text-sm font-semibold hover:bg-sky-700 transition flex items-center justify-center gap-2"
+                >
+                  <span>Cek Selengkapnya</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
             ))}
           </div>
         </div>
@@ -98,19 +161,17 @@ const Home = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
             Kenapa Memilih {BRAND}?
           </h2>
-
           <p className="text-gray-600 text-lg mb-10">
             Kami berkomitmen memberikan pelayanan terbaik dengan kejujuran dan ketulusan untuk ibadah Anda
           </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 place-items-stretch">
             {advantages.map((item, i) => (
               <div
                 key={i}
-                className="bg-sky-50 shadow-md rounded-2xl p-8 flex items-center text-lg text-gray-700 hover:shadow-lg transition"
+                className="bg-sky-50 shadow-md rounded-2xl p-6 flex items-center min-h-[90px] text-lg text-gray-700 hover:shadow-lg transition w-full"
               >
-                <CheckCircle className="w-6 h-6 text-sky-500 mr-3" />
-                {item}
+                <CheckCircle className="w-8 h-8 text-sky-500 mr-3" />
+                <span className="leading-snug">{item}</span>
               </div>
             ))}
           </div>
@@ -122,11 +183,9 @@ const Home = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
             Cerita Pelanggan Kami
           </h2>
-
           <p className="text-gray-600 mb-4 text-lg">
             Lihat sendiri bagaimana pelanggan merasakan manfaat dan pelayanan terbaik dari kami
           </p>
-
           <TestimonialCarousel />
         </div>
       </section>
@@ -138,18 +197,16 @@ const Home = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Hubungi Kami
           </h2>
-
           <p className="text-lg mb-6">
             Siap membantu kebutuhan Anda, hubungi kami melalui WhatsApp untuk konsultasi gratis
           </p>
-
           <a
             href={`https://wa.me/${WA_NUMBER}?text=${waText}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 bg-white text-sky-700 hover:bg-sky-50 px-10 py-4 rounded-full text-xl font-semibold shadow-md transition"
+            className="inline-flex items-center justify-center gap-3 bg-white text-sky-700 hover:bg-sky-50 px-4 py-2 rounded-full text-m font-semibold shadow-md transition"
           >
-            <FaWhatsapp className="text-2xl text-green-600" />
+            <FaWhatsapp className="text-xl text-green-600" />
             WhatsApp Kami Sekarang
           </a>
         </div>
