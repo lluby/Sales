@@ -61,7 +61,6 @@ const Navbar = () => {
                     Kambing
                   </a>
                 </li>
-
                 <li>
                   <a
                     href="/aqiqah"
@@ -74,7 +73,6 @@ const Navbar = () => {
                     Paket Aqiqah
                   </a>
                 </li>
-
                 <li>
                   <a
                     href="/qurban"
@@ -87,7 +85,6 @@ const Navbar = () => {
                     Kambing Qurban
                   </a>
                 </li>
-
                 <li>
                   <a
                     href="/peranakan"
@@ -100,18 +97,16 @@ const Navbar = () => {
                     Peranakan Kambing
                   </a>
                 </li>
-
               </ul>
             )}
           </li>
-
           <li>
             <a href="/contact" className={linkClass("/contact")}>
               Kontak
             </a>
           </li>
         </ul>
-        
+
         <button
           className="md:hidden p-2 text-white focus:outline-none"
           onClick={toggleMobile}
@@ -136,7 +131,7 @@ const Navbar = () => {
               >
                 <span
                   className={
-                    ["/kambing", "/aqiqah", "/qurban"].includes(active)
+                    ["/kambing", "/aqiqah", "/qurban", "/peranakan"].includes(active)
                       ? "text-sky-700 font-bold"
                       : ""
                   }
@@ -165,7 +160,6 @@ const Navbar = () => {
                       Kambing
                     </a>
                   </li>
-
                   <li>
                     <a
                       href="/aqiqah"
@@ -178,7 +172,6 @@ const Navbar = () => {
                       Paket Aqiqah
                     </a>
                   </li>
-
                   <li>
                     <a
                       href="/qurban"
@@ -189,6 +182,18 @@ const Navbar = () => {
                       }`}
                     >
                       Kambing Qurban
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/peranakan"
+                      className={`px-4 py-2 block ${
+                        active === "/peranakan"
+                          ? "bg-sky-200 font-semibold"
+                          : "hover:bg-sky-100"
+                      }`}
+                    >
+                      Peranakan Kambing
                     </a>
                   </li>
                 </ul>

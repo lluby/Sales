@@ -68,7 +68,7 @@ const Home = () => {
 
   const advantages = [
     "Harga bersahabat dengan kualitas terbaik",
-    "Hewan sehat dan disembelih secara syar’i",
+    "Hewan sehat dan disembelih secara syar'i",
     "Masakan higienis dengan cita rasa lezat",
     "Pengantaran tepat waktu ke rumah pelanggan",
   ];
@@ -79,55 +79,51 @@ const Home = () => {
   return (
     <div className="w-full font-sans bg-white text-gray-800">
       <Navbar />
-      <section className="relative text-white text-center py-20 px-8 overflow-hidden mt-8">
-        <div className="absolute inset-0 z-0">
-          <div className="h-full w-full">
-            <Slider
-              autoplay
-              infinite
-              arrows={false}
-              speed={10000}
-              autoplaySpeed={3000}
-              fade={true}
-              dots={false}
-            >
-              <img
-                src="/image/bg1.jpg"
-                className="w-full h-full object-cover brightness-50"
-              />
-              <img
-                src="/image/bg2.jpg"
-                className="w-full h-full object-cover brightness-50"
-              />
-            </Slider>
-          </div>
-        </div>
-
-        <div className="absolute inset-0 bg-blue-900/40 z-0"></div>
-        <div className="relative z-10 max-w-5xl mx-auto">
-          <h1 className="text-6xl md:text-7xl font-extrabold text-center mb-8 text-white">
-            {BRAND}
-          </h1>
-
-          <h2 className="text-4xl md:text-4xl font-bold text-white leading-snug mb-8">
-            Solusi Lengkap untuk Kambing Sehat, Aqiqah, & Qurban
-          </h2>
-
-          <p className="text-lg md:text-lg text-white mb-12 text-center font-semibold">
-            {BRAND}, menyediakan semua kebutuhan kambing Anda dalam satu tempat mulai dari 
-            kambing besar berkualitas, paket aqiqah praktis, kambing qurban yang sehat, hingga anakan kambing siap pelihara, 
-            lengkap, terpercaya, dan selalu siap melayani kapan pun Anda butuh
-          </p>
-
-          <a
-            href={`https://wa.me/${WA_NUMBER}?text=${waText}`}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex items-center gap-3 bg-white text-sky-700 hover:bg-sky-50 px-6 py-3 text-xl font-semibold rounded-full shadow-md transition"
+      <section className="relative text-white text-center mt-6">
+        <div className="relative w-full h-screen">
+          <Slider
+            autoplay
+            infinite
+            arrows={false}
+            speed={10000}
+            autoplaySpeed={3000}
+            fade={true}
+            dots={false}
           >
-            <FaWhatsapp className="text-xl text-green-600" />
-            Hubungi Kami
-          </a>
+            <img
+              src="/image/bg1.jpg"
+              className="w-full h-screen object-cover brightness-50"
+            />
+            <img
+              src="/image/bg2.jpg"
+              className="w-full h-screen object-cover brightness-50"
+            />
+          </Slider>
+
+          <div className="absolute inset-0 bg-blue-900/40 z-10"></div>
+
+          <div className="absolute inset-0 flex flex-col justify-center items-center z-20 px-6 text-center">
+            <h1 className="text-4xl md:text-7xl font-extrabold mb-6">
+              {BRAND}
+            </h1>
+            <h2 className="text-2xl md:text-4xl font-bold mb-6">
+              Solusi Lengkap untuk Kambing Sehat, Aqiqah, & Qurban
+            </h2>
+            <p className="max-w-md md:max-w-3xl text-base md:text-lg mb-6">
+              {BRAND}, menyediakan semua kebutuhan kambing Anda mulai dari kambing besar
+              berkualitas, paket aqiqah praktis, hewan qurban sehat, hingga anakan
+              kambing siap pelihara. Lengkap, terpercaya, dan selalu siap melayani.
+            </p>
+            <a
+              href={`https://wa.me/${WA_NUMBER}?text=${waText}`}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-3 bg-white text-sky-700 hover:bg-sky-50 px-6 py-3 text-lg font-semibold rounded-full shadow-md transition"
+            >
+              <FaWhatsapp className="text-2xl text-green-600" />
+              Hubungi Kami
+            </a>
+          </div>
         </div>
       </section>
 
