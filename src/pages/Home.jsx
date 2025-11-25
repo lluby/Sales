@@ -77,9 +77,9 @@ const Home = () => {
     "Halo,%20saya%20ingin%20bertanya%20mengenai%20layanan%20Jual%20Kambing.";
 
   return (
-    <div className="w-full font-sans bg-white text-gray-800">
+    <div className="w-full font-sans bg-blue-900/40 text-gray-800">
       <Navbar />
-      <section className="relative text-white text-center mt-6">
+      <section className="relative text-white text-center">
         <div className="relative w-full h-screen">
           <Slider
             autoplay
@@ -103,13 +103,13 @@ const Home = () => {
           <div className="absolute inset-0 bg-blue-900/40 z-10"></div>
 
           <div className="absolute inset-0 flex flex-col justify-center items-center z-20 px-6 text-center">
-            <h1 className="text-4xl md:text-7xl font-extrabold mb-6">
+            <h1 className="text-4xl md:text-7xl font-extrabold mb-12">
               {BRAND}
             </h1>
-            <h2 className="text-2xl md:text-4xl font-bold mb-6">
+            <h2 className="text-2xl md:text-4xl font-bold mb-12">
               Solusi Lengkap untuk Kambing Sehat, Aqiqah, & Qurban
             </h2>
-            <p className="max-w-md md:max-w-3xl text-base md:text-lg mb-6">
+            <p className="max-w-md md:max-w-3xl text-base md:text-lg mb-12">
               {BRAND}, menyediakan semua kebutuhan kambing Anda mulai dari kambing besar
               berkualitas, paket aqiqah praktis, hewan qurban sehat, hingga anakan
               kambing siap pelihara. Lengkap, terpercaya, dan selalu siap melayani.
