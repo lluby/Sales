@@ -75,7 +75,7 @@ const packages = [
     title: "Paket Exclusive 80 Porsi (2 Kambing Jantan Besar)",
     image: "/image/aqiqah1.jpg",
     portions: "80 Porsi",
-    goat: "2 Ekor Kambing Jantan – Ukuran Besar",
+    goat: "2 Ekor Kambing Jantan - Ukuran Besar",
     items: [
       "Nasi kotak premium",
       "Sendok premium",
@@ -97,10 +97,10 @@ const Aqiqah = () => {
 
       <section className="py-12 bg-white text-center">
         <div className="max-w-6xl mx-auto px-6 mt-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-sky-700">
             PILIHAN PAKET AQIQAH
           </h2>
-          <p className="text-gray-800 mb-6 text-lg font-medium">
+          <p className="text-sky-700 mb-6 text-lg font-medium">
             Harga mulai dari Rp1.800.000
           </p>
 

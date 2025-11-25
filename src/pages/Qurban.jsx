@@ -38,7 +38,7 @@ const Qurban = () => {
     <div className="bg-linear-to-b from-sky-50 to-white py-20">
       <Navbar />
       <div className="max-w-5xl mx-auto px-6 space-y-16">
-        <h1 className="text-4xl font-bold text-gray-800 mb-12 text-center">
+        <h1 className="text-4xl font-bold text-sky-700 mb-12 text-center">
           PILIHAN KAMBING QURBAN SEHAT
           <p className="text-xl mt-2">Mulai dari 1.500.000, bisa bawa kambing untuk pelengkap Ibadah Qurbanmu</p>
         </h1>

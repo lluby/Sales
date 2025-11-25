@@ -7,6 +7,7 @@ import Kambing from "./pages/Kambing";
 import Aqiqah from "./pages/Aqiqah";
 import Qurban from "./pages/Qurban";
 import Contact from "./pages/Contact";
+import AnakanKambing from "./pages/Peranakan";
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/kambing" element={<Kambing />} />
         <Route path="/aqiqah" element={<Aqiqah />} />
         <Route path="/qurban" element={<Qurban />} />
+        <Route path="/peranakan" element={<AnakanKambing />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </BrowserRouter>

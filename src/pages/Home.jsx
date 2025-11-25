@@ -12,6 +12,9 @@ import TestimonialCarousel from "./TestimonialCarousel";
 import Navbar from "../components/Navbar";
 import { WA_NUMBER, BRAND } from "../config";
 import ServiceAreas from "./ServiceAreas";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Home = () => {
   const categories = [
@@ -35,7 +38,7 @@ const Home = () => {
   const steps = [
     {
       id: 1,
-      img: "/image/kambing1.png",
+      img: "/image/kambing3.png",
       title: "Kambing Super",
       subtitle: "Best Seller",
       link: "/kambing",
@@ -49,10 +52,17 @@ const Home = () => {
     },
     {
       id: 3,
-      img: "/image/kambing1.png",
+      img: "/image/domba.png",
       title: "Kambing Qurban",
       subtitle: "Terlaris",
       link: "/qurban",
+    },
+    {
+      id: 4,
+      img: "/image/anak.jpg",
+      title: "Anakan Kambing",
+      subtitle: "Sehat & Siap Pelihara",
+      link: "/peranakan",
     },
   ];
 
@@ -69,16 +79,46 @@ const Home = () => {
   return (
     <div className="w-full font-sans bg-white text-gray-800">
       <Navbar />
-      <section className="relative bg-sky-400 text-white text-center py-20 px-6">
-        <div className="absolute inset-0 bg-sky-500/60"></div>
+      <section className="relative text-white text-center py-20 px-8 overflow-hidden mt-8">
+        <div className="absolute inset-0 z-0">
+          <div className="h-full w-full">
+            <Slider
+              autoplay
+              infinite
+              arrows={false}
+              speed={10000}
+              autoplaySpeed={3000}
+              fade={true}
+              dots={false}
+            >
+              <img
+                src="/image/bg1.jpg"
+                className="w-full h-full object-cover brightness-50"
+              />
+              <img
+                src="/image/bg2.jpg"
+                className="w-full h-full object-cover brightness-50"
+              />
+            </Slider>
+          </div>
+        </div>
+
+        <div className="absolute inset-0 bg-blue-900/40 z-0"></div>
         <div className="relative z-10 max-w-5xl mx-auto">
-          <h1 className="text-3xl md:text-5xl font-bold leading-snug mb-6">
-            Solusi Lengkap untuk Kambing Sehat, Aqiqah, & Qurban
+          <h1 className="text-6xl md:text-7xl font-extrabold text-center mb-8 text-white">
+            {BRAND}
           </h1>
 
-          <p className="text-lg md:text-xl text-sky-50 mb-10">
-            {BRAND} hadir dengan layanan profesional dan harga bersahabat untuk kebutuhan kambing sehat, aqiqah, maupun qurban
+          <h2 className="text-4xl md:text-4xl font-bold text-white leading-snug mb-8">
+            Solusi Lengkap untuk Kambing Sehat, Aqiqah, & Qurban
+          </h2>
+
+          <p className="text-lg md:text-lg text-white mb-12 text-center font-semibold">
+            {BRAND}, menyediakan semua kebutuhan kambing Anda dalam satu tempat mulai dari 
+            kambing besar berkualitas, paket aqiqah praktis, kambing qurban yang sehat, hingga anakan kambing siap pelihara, 
+            lengkap, terpercaya, dan selalu siap melayani kapan pun Anda butuh
           </p>
+
           <a
             href={`https://wa.me/${WA_NUMBER}?text=${waText}`}
             target="_blank"
@@ -122,11 +162,12 @@ const Home = () => {
             {steps.map((step) => (
               <div
                 key={step.id}
-                className="relative bg-white rounded-2xl shadow-md p-6 w-64 flex flex-col items-center text-center"
+                className="relative bg-white rounded-2xl shadow-md p-6 w-56 flex flex-col items-center text-center"
               >
                 <div className="absolute -top-3 -left-3 w-10 h-10 bg-sky-200 text-black rounded-full flex items-center justify-center font-bold text-lg shadow-md">
                   {step.id}
                 </div>
+
                 <div className="relative w-full h-42 mb-4 rounded-xl overflow-hidden">
                   <img
                     src={step.img}
@@ -134,15 +175,13 @@ const Home = () => {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="font-bold text-[#151E3F] text-xl">
-                  {step.title}
-                </h3>
+
+                <h3 className="font-bold text-[#151E3F] text-xl">{step.title}</h3>
                 <h4 className="font-semibold text-[#151E3F] mb-2 text-base">
                   {step.subtitle}
                 </h4>
-                <p className="text-sm text-gray-600 mb-4">
-                  {step.desc}
-                </p>
+                <p className="text-sm text-gray-600 mb-4">{step.desc}</p>
+
                 <Link
                   to={step.link}
                   className="mt-auto bg-sky-600 text-white px-4 py-2 rounded-xl text-sm font-semibold hover:bg-sky-700 transition flex items-center justify-center gap-2"

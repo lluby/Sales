@@ -3,56 +3,56 @@ import Navbar from "../components/Navbar";
 import { WA_NUMBER } from "../config";
 import { FaWhatsapp } from "react-icons/fa";
 
-const kambings = [
+const peranakans = [
   {
-    name: "Kambing Etawa Premium",
-    weight: "25-30kg",
+    name: "Peranakan Kambing Etawa Premium",
+    weight: "9-15kg",
     gender: "Jantan",
     description: "Sehat dan gemuk, cocok untuk berbagai kebutuhan",
-    price: "Rp 1.500.000 - Rp 2.800.000",
+    price: "Rp 1.000.000 - Rp 1.500.000",
     age: "1,7 tahun",
-    image: "/image/kambing1.png",
+    image: "/image/anak.jpg",
   },
   {
-    name: "Kambing Jawa Randu",
-    weight: "20-25kg",
+    name: "Peranakan Kambing Jawa Randu",
+    weight: "8-15kg",
     gender: "Jantan",
     description: "Sehat dan cocok untuk aqiqah maupun kurban",
-    price: "Rp 1.800.000 - Rp 3.500.000",
+    price: "Rp 1.100.000 - Rp 1.800.000",
     age: "1,5 tahun",
-    image: "/image/kambing1.png",
+    image: "/image/anak.jpg",
   },
   {
-    name: "Kambing Jawa Kacang",
-    weight: "28-32kg",
+    name: "Peranakan Kambing Jawa Kacang",
+    weight: "7-11kg",
     gender: "Jantan",
     description: "Kualitas premium, sehat dan gemuk",
-    price: "Rp 1.700.000 - Rp 3.250.000",
+    price: "Rp 1.200.000 - Rp 1.550.000",
     age: "2 tahun",
-    image: "/image/kambing1.png",
+    image: "/image/anak.jpg",
   },
   {
-    name: "Domba",
-    weight: "26-30kg",
+    name: "Anak Domba",
+    weight: "8-14kg",
     gender: "Jantan",
     description: "Kualitas premium, sehat dan gemuk",
-    price: "Rp 1.600.000 - Rp 3.400.000",
+    price: "Rp 1.050.000 - Rp 1.600.000",
     age: "1,8 tahun",
-    image: "/image/kambing1.png",
+    image: "/image/anak.jpg",
   },
 ];
 
-const Kambing = () => {
+const Peranakan = () => {
   return (
     <div className="bg-linear-to-b from-sky-50 to-white py-20">
       <Navbar />
       <div className="max-w-5xl mx-auto px-6 space-y-16">
         <h1 className="text-4xl font-bold text-sky-700 mb-12 text-center">
-          PILIHAN KAMBING
-          <p className="text-xl mt-2">Mulai dari 1.800.000, bisa bawa kambing yang dimau</p>
+          PILIHAN PERANAKAN KAMBING
+          <p className="text-xl mt-2">Mulai dari 1.000.000, bisa bawa anak kambing yang dimau</p>
         </h1>
 
-        {kambings.map((kambing, i) => (
+        {peranakans.map((peranakans, i) => (
           <div
             key={i}
             className={`flex flex-col md:flex-row items-center bg-white rounded-3xl shadow-xl overflow-hidden transform transition hover:scale-105 duration-300 max-w-4xl mx-auto ${
@@ -61,8 +61,8 @@ const Kambing = () => {
           >
             <div className="md:w-1/2 flex justify-center p-6 md:p-10">
               <img
-                src={kambing.image}
-                alt={kambing.name}
+                src={peranakans.image}
+                alt={peranakans.name}
                 className="w-auto max-h-64 object-contain rounded-2xl"
               />
             </div>
@@ -73,23 +73,23 @@ const Kambing = () => {
               }`}
             >
               <h2 className="text-2xl md:text-3xl font-bold text-sky-700">
-                {kambing.name}
+                {peranakans.name}
               </h2>
-              <p className="text-gray-600">Berat: {kambing.weight}</p>
-              <p className="text-gray-600">Jenis: {kambing.gender}</p>
-              <p className="text-gray-600">Umur: {kambing.age}</p>
-              <p className="text-gray-600">{kambing.description}</p>
+              <p className="text-gray-600">Berat: {peranakans.weight}</p>
+              <p className="text-gray-600">Jenis: {peranakans.gender}</p>
+              <p className="text-gray-600">Umur: {peranakans.age}</p>
+              <p className="text-gray-600">{peranakans.description}</p>
               <p className="text-xl md:text-2xl font-semibold text-green-700">
-                {kambing.price}
+                {peranakans.price}
               </p>
               <a
                 href={`https://wa.me/${WA_NUMBER}?text=Halo%20saya%20ingin%20memesan%20${encodeURIComponent(
-                  kambing.name
+                  peranakans.name
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 w-12 h-12 flex items-center justify-center bg-green-500 hover:bg-green-600 text-white rounded-full shadow-lg transition self-start"
-                title={`Pesan ${kambing.name} via WhatsApp`}
+                title={`Pesan ${peranakans.name} via WhatsApp`}
               >
                 <FaWhatsapp className="w-6 h-6" />
               </a>
@@ -101,4 +101,4 @@ const Kambing = () => {
   );
 };
 
-export default Kambing;
+export default Peranakan;

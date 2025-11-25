@@ -9,11 +9,11 @@ const Contact = () => {
   const contact = {
     title: "Hubungi Kami",
     intro: "Siap membantu kebutuhan Anda, hubungi kami melalui:",
-    phone: "0811 - 2222 - 3333",
-    number: "6285155040590",
+    phone: "0813 - 2788 - 4060",
+    number: "6281327884060",
     address:
-      "RT.02/RW.02, Condong Kulon, Condongsari, Banyuurip, Purworejo Regency, Central Java 54171",
-    copyright: "© 2025 Jual Kambing. All rights reserved.",
+      "RT 06/01 Desa Bangsa, Kec. Kebasen, Kab. Banyumas, Prov. Jawa Tengah",
+    copyright: "© 2025 Tanupatra Farm. All rights reserved.",
   };
 
   const waLink = `https://wa.me/${contact.number}?text=${waMessage}`;
@@ -49,6 +49,18 @@ const Contact = () => {
                 <span className="text-2xl">📍</span>
                 <p className="text-gray-700">{contact.address}</p>
               </div>
+            </div>
+
+            <div className="mt-6 mb-12">
+              <iframe
+                title="maps"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.69647809733!2d109.17188007413704!3d-7.6185066754382135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e657e7f33aacc4f%3A0xddd0e315a0d4a2e9!2sKebasen%2C%20Banyumas!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                width="100%"
+                height="250"
+                allowFullScreen=""
+                loading="lazy"
+                className="rounded-xl shadow"
+              ></iframe>
             </div>
 
             <div className="mt-4 flex justify-center">

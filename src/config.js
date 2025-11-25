@@ -1,2 +1,2 @@
-export const WA_NUMBER = "6285155040590";
-export const BRAND = "KambingSehat";
+export const WA_NUMBER = "6281327884060";
+export const BRAND = "Tanupatra Farm";

@@ -22,22 +22,18 @@ const Navbar = () => {
   return (
     <nav className="bg-sky-400 text-white shadow-md fixed top-0 w-full z-50">
       <div className="container mx-auto flex justify-between items-center px-4 py-3">
-        <h1 className="text-3xl font-bold">JualKambing</h1>
-
-        {/* DESKTOP */}
+        <h1 className="text-3xl font-bold">Tanupatra Farm</h1>
         <ul className="hidden md:flex space-x-8 items-center text-m font-semibold">
           <li>
             <a href="/" className={linkClass("/")}>
               Beranda
             </a>
           </li>
-
-          {/* Dropdown */}
           <li className="relative">
             <button
               onClick={toggleDropdown}
               className={`flex items-center gap-1 ${
-                ["/kambing", "/aqiqah", "/qurban"].includes(active)
+                ["/kambing", "/aqiqah", "/qurban", "/peranakan"].includes(active)
                   ? "text-sky-800 font-bold"
                   : "hover:text-sky-200"
               }`}
@@ -91,6 +87,20 @@ const Navbar = () => {
                     Kambing Qurban
                   </a>
                 </li>
+
+                <li>
+                  <a
+                    href="/peranakan"
+                    className={`px-4 py-2 block transition ${
+                      active === "/peranakan"
+                        ? "bg-sky-200 font-semibold"
+                        : "hover:bg-sky-100"
+                    }`}
+                  >
+                    Peranakan Kambing
+                  </a>
+                </li>
+
               </ul>
             )}
           </li>
@@ -101,8 +111,7 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
-
-        {/* MOBILE TOGGLE */}
+        
         <button
           className="md:hidden p-2 text-white focus:outline-none"
           onClick={toggleMobile}
@@ -111,7 +120,6 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* MOBILE MENU */}
       {isMobileOpen && (
         <div className="md:hidden bg-sky-400 text-white shadow-md">
           <ul className="flex flex-col space-y-2 p-4">
@@ -121,7 +129,6 @@ const Navbar = () => {
               </a>
             </li>
 
-            {/* Mobile Dropdown */}
             <li className="relative">
               <button
                 onClick={toggleDropdown}
