@@ -8,37 +8,37 @@ const kambings = [
     name: "Kambing Etawa Premium",
     weight: "25-30kg",
     gender: "Jantan",
-    description: "Sehat dan gemuk, cocok untuk berbagai kebutuhan",
+    description: "Kambing PE Premium dengan postur besar, sehat, dan aktif. Cocok untuk penggemukan atau pembibitan, siap kirim dalam kondisi terawat dan berkualitas",
     price: "Rp 1.500.000 - Rp 2.800.000",
     age: "1,7 tahun",
-    image: "/image/kambing1.png",
+    image: "/image/etawa.png",
   },
   {
     name: "Kambing Jawa Randu",
     weight: "20-25kg",
     gender: "Jantan",
-    description: "Sehat dan cocok untuk aqiqah maupun kurban",
+    description: "Kambing Jawa Randu dengan badan proporsional, nafsu makan bagus, dan cepat besar. Ideal untuk ternak harian maupun persiapan jangka panjang",
     price: "Rp 1.800.000 - Rp 3.500.000",
     age: "1,5 tahun",
-    image: "/image/kambing1.png",
+    image: "/image/jawarandu.png",
   },
   {
     name: "Kambing Jawa Kacang",
     weight: "28-32kg",
     gender: "Jantan",
-    description: "Kualitas premium, sehat dan gemuk",
+    description: "Kambing Jawa Kacang yang lincah, tahan penyakit, dan mudah dipelihara. Pilihan tepat untuk ternak efisien dan perawatan ringan",
     price: "Rp 1.700.000 - Rp 3.250.000",
     age: "2 tahun",
-    image: "/image/kambing1.png",
+    image: "/image/jawakacang.png",
   },
   {
     name: "Domba",
     weight: "26-30kg",
     gender: "Jantan",
-    description: "Kualitas premium, sehat dan gemuk",
+    description: "Domba sehat dengan bulu tebal dan pertumbuhan stabil. Cocok untuk penggemukan, pembibitan, atau stok ternak berkualitas",
     price: "Rp 1.600.000 - Rp 3.400.000",
     age: "1,8 tahun",
-    image: "/image/kambing1.png",
+    image: "/image/domba.png",
   },
 ];
 
@@ -47,7 +47,7 @@ const Kambing = () => {
     <div className="bg-linear-to-b from-sky-50 to-white py-20">
       <Navbar />
       <div className="max-w-5xl mx-auto px-6 space-y-16">
-        <h1 className="text-4xl font-bold text-sky-700 mb-12 text-center">
+        <h1 className="text-4xl font-bold text-gray-800 mb-12 text-center">
           PILIHAN KAMBING
           <p className="text-xl mt-2">Mulai dari 1.800.000, bisa bawa kambing yang dimau</p>
         </h1>

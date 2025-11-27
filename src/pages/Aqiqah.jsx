@@ -96,11 +96,11 @@ const Aqiqah = () => {
       <Navbar />
 
       <section className="py-12 bg-white text-center">
-        <div className="max-w-6xl mx-auto px-6 mt-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-sky-700">
+        <div className="max-w-6xl mx-auto px-6 mt-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
             PILIHAN PAKET AQIQAH
           </h2>
-          <p className="text-sky-700 mb-6 text-lg font-medium">
+          <p className="text-gray-800 mb-10 text-lg font-medium">
             Harga mulai dari Rp1.800.000
           </p>
 

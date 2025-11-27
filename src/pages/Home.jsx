@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import TestimonialCarousel from "./TestimonialCarousel";
+import Gallery from "./Galerry";
 import Navbar from "../components/Navbar";
 import { WA_NUMBER, BRAND } from "../config";
 import ServiceAreas from "./ServiceAreas";
@@ -149,7 +150,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-10 bg-white text-center">
+      <section className="py-15 bg-white text-center">
         <div className="max-w-6xl mx-auto px-6">
           <h2 className="text-3xl md:text-4xl font-bold mb-16 text-gray-800">
             Paling Banyak Dibeli
@@ -158,7 +159,7 @@ const Home = () => {
             {steps.map((step) => (
               <div
                 key={step.id}
-                className="relative bg-white rounded-2xl shadow-md p-6 w-56 flex flex-col items-center text-center"
+                className="relative bg-white rounded-2xl shadow-md p-4 w-56 flex flex-col items-center text-center"
               >
                 <div className="absolute -top-3 -left-3 w-10 h-10 bg-sky-200 text-black rounded-full flex items-center justify-center font-bold text-lg shadow-md">
                   {step.id}
@@ -224,6 +225,8 @@ const Home = () => {
           <TestimonialCarousel />
         </div>
       </section>
+
+      <Gallery />
 
       <ServiceAreas />
 

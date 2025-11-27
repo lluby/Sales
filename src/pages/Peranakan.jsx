@@ -8,37 +8,37 @@ const peranakans = [
     name: "Peranakan Kambing Etawa Premium",
     weight: "9-15kg",
     gender: "Jantan",
-    description: "Sehat dan gemuk, cocok untuk berbagai kebutuhan",
+    description: "Postur besar dan sehat, siap jadi bibit unggul",
     price: "Rp 1.000.000 - Rp 1.500.000",
-    age: "1,7 tahun",
-    image: "/image/anak.jpg",
+    age: "6 bulan",
+    image: "/image/anakanetawa.png",
   },
   {
     name: "Peranakan Kambing Jawa Randu",
     weight: "8-15kg",
     gender: "Jantan",
-    description: "Sehat dan cocok untuk aqiqah maupun kurban",
+    description: "Cepat besar, makan lahap, cocok untuk penggemukan",
     price: "Rp 1.100.000 - Rp 1.800.000",
-    age: "1,5 tahun",
-    image: "/image/anak.jpg",
+    age: "9 bulan",
+    image: "/image/anakanrandu.png",
   },
   {
     name: "Peranakan Kambing Jawa Kacang",
     weight: "7-11kg",
     gender: "Jantan",
-    description: "Kualitas premium, sehat dan gemuk",
+    description: "Lincah, kuat, dan perawatan mudah",
     price: "Rp 1.200.000 - Rp 1.550.000",
-    age: "2 tahun",
-    image: "/image/anak.jpg",
+    age: "11 bulan",
+    image: "/image/anakankacang.png",
   },
   {
     name: "Anak Domba",
     weight: "8-14kg",
     gender: "Jantan",
-    description: "Kualitas premium, sehat dan gemuk",
+    description: "Bulu tebal, sehat, dan cepat naik bobot",
     price: "Rp 1.050.000 - Rp 1.600.000",
-    age: "1,8 tahun",
-    image: "/image/anak.jpg",
+    age: "7 bulan",
+    image: "/image/anakandomba.png",
   },
 ];
 
@@ -47,7 +47,7 @@ const Peranakan = () => {
     <div className="bg-linear-to-b from-sky-50 to-white py-20">
       <Navbar />
       <div className="max-w-5xl mx-auto px-6 space-y-16">
-        <h1 className="text-4xl font-bold text-sky-700 mb-12 text-center">
+        <h1 className="text-4xl font-bold text-gray-800 mb-12 text-center">
           PILIHAN PERANAKAN KAMBING
           <p className="text-xl mt-2">Mulai dari 1.000.000, bisa bawa anak kambing yang dimau</p>
         </h1>

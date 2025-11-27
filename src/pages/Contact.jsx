@@ -24,7 +24,7 @@ const Contact = () => {
 
       <div className="mt-24 flex justify-center px-4 pb-10">
         <div className="max-w-2xl w-full bg-sky-100 shadow-lg rounded-2xl p-6 space-y-4 border border-gray-100">
-          <h2 className="text-2xl font-bold text-center">{contact.title}</h2>
+          <h2 className="text-2xl font-bold text-gray-800 text-center">{contact.title}</h2>
           <p className="text-center text-gray-600">{contact.intro}</p>
 
           <div className="mt-4 space-y-3">
@@ -54,11 +54,13 @@ const Contact = () => {
             <div className="mt-6 mb-12">
               <iframe
                 title="maps"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.69647809733!2d109.17188007413704!3d-7.6185066754382135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e657e7f33aacc4f%3A0xddd0e315a0d4a2e9!2sKebasen%2C%20Banyumas!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3954.9435667854036!2d109.2504915!3d-7.581122199999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e654357ec8f767f%3A0xfb5252ff4a2eca79!2sTernak%20Kambing%20-%20Tanupatra%20Farm!5e0!3m2!1sid!2sid!4v1764221866367!5m2!1sid!2sid"
                 width="100%"
-                height="250"
-                allowFullScreen=""
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen
                 loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
                 className="rounded-xl shadow"
               ></iframe>
             </div>
