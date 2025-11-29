@@ -292,7 +292,7 @@ const Qurban = () => {
                   <img
                     src={`https://ik.imagekit.io/purnomo/${kambing.image}`}
                     alt={kambing.name}
-                    className="relative w-full max-h-80 object-contain transform group-hover:scale-110 transition-transform duration-500"
+                    className="relative w-full max-h-80 mt-10 md:mt-2 object-contain transform group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>
 

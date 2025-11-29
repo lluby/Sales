@@ -147,8 +147,20 @@ const Navbar = () => {
       </div>
 
       {isMobileOpen && (
-        <div className="md:hidden bg-sky-400 text-white shadow-md">
-          <ul className="flex flex-col space-y-2 p-4">
+        <div
+          className={`md:hidden text-white shadow-md ${
+            ["/kambing"].includes(active)
+              ? " from-sky-600 to-blue-700"
+              : ["/aqiqah"].includes(active)
+              ? " from-purple-600 to-pink-600"
+              : ["/qurban"].includes(active)
+              ? "from-green-600 to-emerald-700"
+              : ["/peranakan"].includes(active)
+              ? "from-blue-600 to-sky-600"
+              : "from-sky-600 to-blue-700"
+          }`}
+        >
+          <ul className="flex flex-col space-y-4 p-4">
             <li>
               <a href="/" className={linkClass("/")}>
                 Beranda
@@ -165,7 +177,7 @@ const Navbar = () => {
                     ["/kambing", "/aqiqah", "/qurban", "/peranakan"].includes(
                       active
                     )
-                      ? "text-sky-700 font-bold"
+                      ? "text-gray-200 font-bold undeline"
                       : ""
                   }
                 >
@@ -180,50 +192,66 @@ const Navbar = () => {
               </button>
 
               {isDropdownOpen && (
-                <ul className="bg-white text-gray-800 shadow-lg mt-2 rounded-md overflow-hidden border border-gray-200">
-                  <li>
+                <ul className=" text-gray-100 mt-2 rounded-md overflow-hidden">
+                  <li
+                    className={`${
+                      active === "/kambing" ? "border-b-2" : "border-0"
+                    } `}
+                  >
                     <a
                       href="/kambing"
                       className={`px-4 py-2 block ${
                         active === "/kambing"
-                          ? "bg-sky-200 font-semibold"
-                          : "hover:bg-sky-100"
+                          ? "text-gray-200 font-semibold"
+                          : "hover:text-gray-100"
                       }`}
                     >
                       Kambing
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className={`${
+                      active === "/aqiqah" ? "border-b-2" : "border-0"
+                    } `}
+                  >
                     <a
                       href="/aqiqah"
                       className={`px-4 py-2 block ${
                         active === "/aqiqah"
-                          ? "bg-sky-200 font-semibold"
-                          : "hover:bg-sky-100"
+                          ? "text-gray-200 font-semibold "
+                          : "hover:text-gray-100"
                       }`}
                     >
                       Paket Aqiqah
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className={`${
+                      active === "/qurban" ? "border-b-2" : "border-0"
+                    } `}
+                  >
                     <a
                       href="/qurban"
                       className={`px-4 py-2 block ${
                         active === "/qurban"
-                          ? "bg-sky-200 font-semibold"
-                          : "hover:bg-sky-100"
+                          ? "text-gray-200 font-semibold"
+                          : "hover:text-gray-100"
                       }`}
                     >
                       Kambing Qurban
                     </a>
                   </li>
-                  <li>
+                  <li
+                    className={`${
+                      active === "/peranakan" ? "border-b-2" : "border-0"
+                    } `}
+                  >
                     <a
                       href="/peranakan"
                       className={`px-4 py-2 block ${
                         active === "/peranakan"
-                          ? "bg-sky-200 font-semibold"
-                          : "hover:bg-sky-100"
+                          ? "text-gray-200 font-semibold"
+                          : "hover:text-gray-100"
                       }`}
                     >
                       Peranakan Kambing
