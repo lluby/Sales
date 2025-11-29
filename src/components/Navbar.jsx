@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const timeoutRef = useRef(null);
 
   const toggleDropdown = () => setIsDropdownOpen(!isDropdownOpen);
   const toggleMobile = () => setIsMobileOpen(!isMobileOpen);
@@ -14,27 +15,57 @@ const Navbar = () => {
     setIsDropdownOpen(false);
   }, [active]);
 
+  const handleMouseEnter = () => {
+    clearTimeout(timeoutRef.current);
+    setIsDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 300); // Jeda 300ms sebelum menutup
+  };
+
   const linkClass = (path) =>
     active === path
-      ? "text-sky-700 font-bold"
+      ? "text-gray-200 font-bold underline"
       : "hover:text-sky-200 transition";
 
   return (
-    <nav className="bg-sky-400 text-white shadow-md fixed top-0 w-full z-50">
+    <nav
+      className={`bg-gradient-to-r text-white shadow-md fixed top-0 w-full z-50 ${
+        ["/kambing"].includes(active)
+          ? " from-sky-600 to-blue-700"
+          : ["/aqiqah"].includes(active)
+          ? " from-purple-600 to-pink-600"
+          : ["/qurban"].includes(active)
+          ? "from-green-600 to-emerald-700"
+          : ["/peranakan"].includes(active)
+          ? "from-blue-600 to-sky-600"
+          : "from-sky-600 to-blue-700"
+      }`}
+    >
       <div className="container mx-auto flex justify-between items-center px-4 py-3">
-        <h1 className="text-3xl font-bold">Tanupatra Farm</h1>
+        <a href="/" className="text-3xl font-bold">
+          Tanupatra Farm
+        </a>
         <ul className="hidden md:flex space-x-8 items-center text-m font-semibold">
           <li>
             <a href="/" className={linkClass("/")}>
               Beranda
             </a>
           </li>
-          <li className="relative">
+          <li
+            className="relative"
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
             <button
-              onClick={toggleDropdown}
               className={`flex items-center gap-1 ${
-                ["/kambing", "/aqiqah", "/qurban", "/peranakan"].includes(active)
-                  ? "text-sky-800 font-bold"
+                ["/kambing", "/aqiqah", "/qurban", "/peranakan"].includes(
+                  active
+                )
+                  ? "text-gray-200 font-bold underline"
                   : "hover:text-sky-200"
               }`}
             >
@@ -131,7 +162,9 @@ const Navbar = () => {
               >
                 <span
                   className={
-                    ["/kambing", "/aqiqah", "/qurban", "/peranakan"].includes(active)
+                    ["/kambing", "/aqiqah", "/qurban", "/peranakan"].includes(
+                      active
+                    )
                       ? "text-sky-700 font-bold"
                       : ""
                   }

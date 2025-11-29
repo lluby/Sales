@@ -2,10 +2,19 @@ import React from "react";
 import { BRAND } from "../config";
 
 const Gallery = () => {
-  const images = [
-    "/image/kandang1.jpg",
-    "/image/kandang2.jpg",
-    "/image/kandang3.jpg",
+  const mediaItems = [
+    {
+      type: "video",
+      src: "https://ik.imagekit.io/purnomo/WhatsApp%20Video%202025-11-24%20at%2016.42.19.mp4",
+    },
+    {
+      type: "video",
+      src: "https://ik.imagekit.io/purnomo/WhatsApp%20Video%202025-11-24%20at%2016.42.19%20(1).mp4",
+    },
+    {
+      type: "video",
+      src: "https://ik.imagekit.io/purnomo/WhatsApp%20Video%202025-11-24%20at%2016.38.04.mp4",
+    },
   ];
 
   return (
@@ -16,16 +25,25 @@ const Gallery = () => {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {images.map((src, index) => (
+          {mediaItems.map((item, index) => (
             <div
               key={index}
-              className="w-full h-56 md:h-64 rounded-2xl overflow-hidden shadow-md"
+              className="w-full h-full max-h-[1000px] rounded-2xl overflow-hidden shadow-md"
             >
-              <img
-                src={src}
-                alt={`Galeri kandang ${index + 1}`}
-                className="w-full h-full object-cover"
-              />
+              {item.type === "image" ? (
+                <img
+                  src={item.src}
+                  alt={`Galeri ${BRAND} ${index + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <video
+                  src={item.src}
+                  className="w-full h-full object-cover"
+                  controls
+                  playsInline
+                />
+              )}
             </div>
           ))}
         </div>

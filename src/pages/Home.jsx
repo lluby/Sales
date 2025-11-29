@@ -5,7 +5,7 @@ import {
   ShoppingCart,
   Gift,
   Users,
-  ArrowRight
+  ArrowRight,
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import TestimonialCarousel from "./TestimonialCarousel";
@@ -22,45 +22,45 @@ const Home = () => {
     {
       title: "Kambing Sehat",
       desc: "Kambing sehat, gemuk, dan terawat langsung dari peternakan kami",
-      icon: <ShoppingCart className="w-10 h-10 text-sky-500 mb-4" />,
+      icon: <ShoppingCart className="w-12 h-12 text-sky-500 mb-4" />,
     },
     {
       title: "Paket Aqiqah Praktis",
       desc: "Layanan aqiqah lengkap: pemilihan kambing, penyembelihan sesuai syariat, dan masakan siap santap",
-      icon: <Gift className="w-10 h-10 text-sky-500 mb-4" />,
+      icon: <Gift className="w-12 h-12 text-sky-500 mb-4" />,
     },
     {
       title: "Kambing Qurban Terbaik",
       desc: "Kambing qurban berkualitas untuk Idul Adha, siap diantar dan disalurkan ke lokasi Anda",
-      icon: <Users className="w-10 h-10 text-sky-500 mb-4" />,
+      icon: <Users className="w-12 h-12 text-sky-500 mb-4" />,
     },
   ];
 
   const steps = [
     {
       id: 1,
-      img: "/image/kambing3.png",
+      img: "kambing3.png",
       title: "Kambing Super",
       subtitle: "Best Seller",
       link: "/kambing",
     },
     {
       id: 2,
-      img: "/image/aqiqah1.jpg",
+      img: "aqiqah1.jpg",
       title: "Paket Aqiqah",
       subtitle: "Praktis & Hemat",
       link: "/aqiqah",
     },
     {
       id: 3,
-      img: "/image/domba.png",
+      img: "domba.png",
       title: "Kambing Qurban",
       subtitle: "Terlaris",
       link: "/qurban",
     },
     {
       id: 4,
-      img: "/image/anak.jpg",
+      img: "anak.jpg",
       title: "Anakan Kambing",
       subtitle: "Sehat & Siap Pelihara",
       link: "/peranakan",
@@ -78,8 +78,10 @@ const Home = () => {
     "Halo,%20saya%20ingin%20bertanya%20mengenai%20layanan%20Jual%20Kambing.";
 
   return (
-    <div className="w-full font-sans bg-blue-900/40 text-gray-800">
+    <div className="w-full font-sans bg-gradient-to-b from-blue-50 to-white text-gray-800 mt-10">
       <Navbar />
+
+      {/* Hero Section */}
       <section className="relative text-white text-center">
         <div className="relative w-full h-screen">
           <Slider
@@ -92,99 +94,151 @@ const Home = () => {
             dots={false}
           >
             <img
-              src="/image/bg1.jpg"
+              src="bg1.jpg"
               className="w-full h-screen object-cover brightness-50"
             />
             <img
-              src="/image/bg2.jpg"
+              src="bg2.jpg"
               className="w-full h-screen object-cover brightness-50"
             />
           </Slider>
 
-          <div className="absolute inset-0 bg-blue-900/40 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-blue-900/60 via-blue-900/50 to-blue-900/70 z-10"></div>
 
           <div className="absolute inset-0 flex flex-col justify-center items-center z-20 px-6 text-center">
-            <h1 className="text-4xl md:text-7xl font-extrabold mb-12">
+            <div className="bg-white/10 backdrop-blur-sm px-8 py-3 rounded-full mb-6 border border-white/30">
+              <p className="text-sky-200 text-sm md:text-base font-semibold tracking-wider uppercase">
+                ✨ Terpercaya Sejak Lama
+              </p>
+            </div>
+
+            <h1 className="text-5xl md:text-8xl font-black mb-6 tracking-tight drop-shadow-2xl">
               {BRAND}
             </h1>
-            <h2 className="text-2xl md:text-4xl font-bold mb-12">
-              Solusi Lengkap untuk Kambing Sehat, Aqiqah, & Qurban
+
+            <h2 className="text-2xl md:text-5xl font-bold mb-8 leading-tight max-w-4xl drop-shadow-lg">
+              Solusi Lengkap untuk
+              <br />
+              <span className="text-sky-300">Kambing Sehat</span>,{" "}
+              <span className="text-green-300">Aqiqah</span> &{" "}
+              <span className="text-yellow-300">Qurban</span>
             </h2>
-            <p className="max-w-md md:max-w-3xl text-base md:text-lg mb-12">
-              {BRAND}, menyediakan semua kebutuhan kambing Anda mulai dari kambing besar
-              berkualitas, paket aqiqah praktis, hewan qurban sehat, hingga anakan
-              kambing siap pelihara. Lengkap, terpercaya, dan selalu siap melayani.
+
+            <p className="max-w-2xl md:max-w-4xl text-lg md:text-xl mb-10 leading-relaxed text-gray-100 font-medium">
+              Menyediakan kambing berkualitas premium, paket aqiqah praktis,
+              hewan qurban sehat, hingga anakan kambing siap pelihara.{" "}
+              <span className="text-sky-300 font-bold">
+                Lengkap, terpercaya, dan selalu siap melayani
+              </span>
+              .
             </p>
+
             <a
               href={`https://wa.me/${WA_NUMBER}?text=${waText}`}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-3 bg-white text-sky-700 hover:bg-sky-50 px-6 py-3 text-lg font-semibold rounded-full shadow-md transition"
+              className="group inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-green-600 text-white hover:from-green-600 hover:to-green-700 px-8 py-4 text-lg md:text-xl font-bold rounded-full shadow-2xl transition-all transform hover:scale-105 hover:shadow-green-500/50"
             >
-              <FaWhatsapp className="text-2xl text-green-600" />
-              Hubungi Kami
+              <FaWhatsapp className="text-3xl animate-pulse" />
+              <span>Hubungi Kami Sekarang</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
+
+            <p className="mt-4 text-sm text-gray-200">
+              💬 Konsultasi Gratis • ⚡ Respon Cepat • ✅ Terpercaya
+            </p>
           </div>
         </div>
       </section>
 
-      <section className="py-10 bg-gray-50 text-center">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-gray-800">
-            Layanan Utama {BRAND}
-          </h2>
+      {/* Services Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50 text-center">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-16">
+            <p className="text-sky-600 font-bold text-sm md:text-base uppercase tracking-wider mb-3">
+              Layanan Terbaik Kami
+            </p>
+            <h2 className="text-4xl md:text-5xl font-black mb-4 text-gray-900 leading-tight">
+              Layanan Utama {BRAND}
+            </h2>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-sky-500 to-blue-600 mx-auto rounded-full"></div>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {categories.map((item) => (
+            {categories.map((item, index) => (
               <div
                 key={item.title}
-                className="bg-white rounded-2xl shadow-md hover:shadow-lg p-8 text-center transition flex flex-col items-center cursor-pointer"
+                className="group bg-white rounded-3xl shadow-lg hover:shadow-2xl p-10 text-center transition-all transform hover:-translate-y-2 border-2 border-transparent hover:border-sky-200 relative overflow-hidden"
               >
-                {item.icon}
-                <h3 className="text-2xl font-semibold text-sky-700 mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-gray-600 text-lg">{item.desc}</p>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-sky-100 rounded-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500"></div>
+
+                <div className="relative z-10 flex flex-col items-center">
+                  <div className="bg-sky-50 p-5 rounded-2xl mb-6 group-hover:bg-sky-100 transition-colors">
+                    {item.icon}
+                  </div>
+
+                  <h3 className="text-2xl md:text-3xl font-black text-gray-900 mb-4">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-gray-600 text-base md:text-lg leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+
+                <div className="absolute -bottom-2 -right-2 text-8xl font-black text-gray-100 group-hover:text-sky-100 transition-colors">
+                  {index + 1}
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-15 bg-white text-center">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-gray-800">
-            Paling Banyak Dibeli
-          </h2>
-          <div className="flex flex-wrap justify-center gap-16 mb-2">
+      {/* Best Seller Section */}
+      <section className="py-16 md:py-24 bg-white text-center">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-16">
+            <p className="text-green-600 font-bold text-sm md:text-base uppercase tracking-wider mb-3">
+              🔥 Produk Populer
+            </p>
+            <h2 className="text-4xl md:text-5xl font-black mb-4 text-gray-900 leading-tight">
+              Paling Banyak Dibeli
+            </h2>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-green-500 to-emerald-600 mx-auto rounded-full"></div>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-8 md:gap-12">
             {steps.map((step) => (
               <div
                 key={step.id}
-                className="relative bg-white rounded-2xl shadow-md p-4 w-56 flex flex-col items-center text-center"
+                className="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl p-6 w-full sm:w-64 flex flex-col items-center text-center transition-all transform hover:-translate-y-3 border border-gray-100"
               >
-                <div className="absolute -top-3 -left-3 w-10 h-10 bg-sky-200 text-black rounded-full flex items-center justify-center font-bold text-lg shadow-md">
+                <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-sky-500 to-blue-600 text-white rounded-full flex items-center justify-center font-black text-xl shadow-lg">
                   {step.id}
                 </div>
 
-                <div className="relative w-full h-42 mb-4 rounded-xl overflow-hidden">
+                <div className="relative w-full h-48 mb-6 rounded-2xl overflow-hidden shadow-md">
                   <img
-                    src={step.img}
+                    src={`https://ik.imagekit.io/purnomo/${step.img}`}
                     alt={step.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
+                  <div className="absolute top-3 right-3 bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold shadow-md">
+                    {step.subtitle}
+                  </div>
                 </div>
 
-                <h3 className="font-bold text-[#151E3F] text-xl">{step.title}</h3>
-                <h4 className="font-semibold text-[#151E3F] mb-2 text-base">
-                  {step.subtitle}
-                </h4>
-                <p className="text-sm text-gray-600 mb-4">{step.desc}</p>
+                <h3 className="font-black text-gray-900 text-2xl mb-2">
+                  {step.title}
+                </h3>
 
                 <Link
                   to={step.link}
-                  className="mt-auto bg-sky-600 text-white px-4 py-2 rounded-xl text-sm font-semibold hover:bg-sky-700 transition flex items-center justify-center gap-2"
+                  className="mt-4 w-full bg-gradient-to-r from-sky-500 to-blue-600 text-white px-6 py-3 rounded-xl text-base font-bold hover:from-sky-600 hover:to-blue-700 transition-all flex items-center justify-center gap-2 shadow-md hover:shadow-lg group-hover:gap-3"
                 >
-                  <span>Cek Selengkapnya</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <span>Lihat Detail</span>
+                  <ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
             ))}
@@ -192,36 +246,63 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-10 bg-white text-center">
-        <div className="max-w-5xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
-            Kenapa Memilih {BRAND}?
-          </h2>
-          <p className="text-gray-600 text-lg mb-10">
-            Kami berkomitmen memberikan pelayanan terbaik dengan kejujuran dan ketulusan untuk ibadah Anda
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 place-items-stretch">
+      {/* Advantages Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-b from-sky-50 to-white text-center">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="mb-16">
+            <p className="text-sky-600 font-bold text-sm md:text-base uppercase tracking-wider mb-3">
+              ⭐ Keunggulan Kami
+            </p>
+            <h2 className="text-4xl md:text-5xl font-black mb-4 text-gray-900 leading-tight">
+              Kenapa Memilih {BRAND}?
+            </h2>
+            <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+              Kami berkomitmen memberikan pelayanan terbaik dengan{" "}
+              <span className="text-sky-600 font-bold">
+                kejujuran dan ketulusan
+              </span>{" "}
+              untuk ibadah Anda
+            </p>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-sky-500 to-blue-600 mx-auto rounded-full mt-6"></div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {advantages.map((item, i) => (
               <div
                 key={i}
-                className="bg-sky-50 shadow-md rounded-2xl p-6 flex items-center min-h-[90px] text-lg text-gray-700 hover:shadow-lg transition w-full"
+                className="group bg-white shadow-lg hover:shadow-xl rounded-2xl p-8 flex items-center text-left transition-all transform hover:-translate-y-1 border-l-4 border-sky-500"
               >
-                <CheckCircle className="w-8 h-8 text-sky-500 mr-3" />
-                <span className="leading-snug">{item}</span>
+                <div className="bg-sky-100 p-3 rounded-xl mr-5 group-hover:bg-sky-200 transition-colors">
+                  <CheckCircle className="w-8 h-8 text-sky-600" />
+                </div>
+                <span className="text-lg md:text-xl font-bold text-gray-800 leading-snug">
+                  {item}
+                </span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-10 bg-gray-50 text-center">
+      {/* Testimonial Section */}
+      <section className="py-16 md:py-24 bg-white text-center">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">
-            Cerita Pelanggan Kami
-          </h2>
-          <p className="text-gray-600 mb-4 text-lg">
-            Lihat sendiri bagaimana pelanggan merasakan manfaat dan pelayanan terbaik dari kami
-          </p>
+          <div className="mb-12">
+            <p className="text-yellow-600 font-bold text-sm md:text-base uppercase tracking-wider mb-3">
+              💬 Testimoni
+            </p>
+            <h2 className="text-4xl md:text-5xl font-black mb-4 text-gray-900 leading-tight">
+              Cerita Pelanggan Kami
+            </h2>
+            <p className="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto">
+              Lihat sendiri bagaimana pelanggan merasakan{" "}
+              <span className="text-sky-600 font-bold">
+                manfaat dan pelayanan terbaik
+              </span>{" "}
+              dari kami
+            </p>
+            <div className="w-24 h-1.5 bg-gradient-to-r from-yellow-500 to-orange-600 mx-auto rounded-full mt-6"></div>
+          </div>
           <TestimonialCarousel />
         </div>
       </section>
@@ -230,23 +311,44 @@ const Home = () => {
 
       <ServiceAreas />
 
-      <section className="py-10 bg-sky-400 text-white text-center">
-        <div className="max-w-3xl mx-auto px-6">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Hubungi Kami
+      {/* CTA Section */}
+      <section className="py-16 md:py-20 bg-gradient-to-r from-sky-500 via-blue-600 to-sky-500 text-white text-center relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjEiIHN0cm9rZS13aWR0aD0iMSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIvPjwvc3ZnPg==')] opacity-30"></div>
+
+        <div className="max-w-4xl mx-auto px-6 relative z-10">
+          <div className="bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mb-6 inline-block border border-white/30">
+            <p className="text-white text-sm font-bold tracking-wider uppercase">
+              📞 Siap Melayani Anda
+            </p>
+          </div>
+
+          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
+            Hubungi Kami Sekarang!
           </h2>
-          <p className="text-lg mb-6">
-            Siap membantu kebutuhan Anda, hubungi kami melalui WhatsApp untuk konsultasi gratis
+
+          <p className="text-xl md:text-2xl mb-10 leading-relaxed font-medium">
+            Siap membantu kebutuhan Anda,{" "}
+            <span className="font-black">hubungi kami</span> melalui WhatsApp
+            untuk{" "}
+            <span className="text-yellow-300 font-black">
+              konsultasi gratis
+            </span>
           </p>
+
           <a
             href={`https://wa.me/${WA_NUMBER}?text=${waText}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-3 bg-white text-sky-700 hover:bg-sky-50 px-4 py-2 rounded-full text-m font-semibold shadow-md transition"
+            className="group inline-flex items-center justify-center gap-3 bg-white text-sky-700 hover:bg-gray-50 px-10 py-5 rounded-full text-xl font-black shadow-2xl transition-all transform hover:scale-105"
           >
-            <FaWhatsapp className="text-xl text-green-600" />
-            WhatsApp Kami Sekarang
+            <FaWhatsapp className="text-3xl text-green-600 animate-bounce" />
+            <span>WhatsApp Kami Sekarang</span>
+            <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
           </a>
+
+          <p className="mt-6 text-sm text-white/90 font-medium">
+            ⚡ Respon Cepat dalam 5 Menit • ✅ Gratis Konsultasi
+          </p>
         </div>
       </section>
     </div>

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Prevent indexing of common private paths (ubah sesuai kebutuhan)
+Disallow: /admin/
+Disallow: /cgi-bin/
+Disallow: /private/
+
+Sitemap: https://www.carikambing.com/sitemap.xml
+Host: https://www.carikambing.com

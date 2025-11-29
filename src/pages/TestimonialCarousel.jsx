@@ -3,27 +3,27 @@ import React from "react";
 const testimonials = [
   {
     name: "Budi",
-    img: "/image/chat1.png",
+    img: "chat1.png",
   },
   {
     name: "Siti",
-    img: "/image/chat1.png",
+    img: "chat1.png",
   },
   {
     name: "Ahmad",
-    img: "/image/chat1.png",
+    img: "chat1.png",
   },
   {
     name: "Budi",
-    img: "/image/chat1.png",
+    img: "chat1.png",
   },
   {
     name: "Siti",
-    img: "/image/chat1.png",
+    img: "chat1.png",
   },
   {
     name: "Ahmad",
-    img: "/image/chat1.png",
+    img: "chat1.png",
   },
 ];
 
@@ -36,7 +36,7 @@ const TestimonialCarousel = () => {
           className="flex-none w-72 shadow-lg rounded-xl overflow-hidden"
         >
           <img
-            src={t.img}
+            src={`https://ik.imagekit.io/purnomo/${t.img}`}
             alt={`Testimoni ${t.name}`}
             className="w-full h-auto object-cover"
           />
