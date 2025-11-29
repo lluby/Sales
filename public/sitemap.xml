@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
   <url>
     <loc>https://www.carikambing.com/</loc>
     <lastmod>2025-11-29</lastmod>
@@ -8,7 +9,7 @@
     <priority>1.00</priority>
     <image:image>
       <image:loc>https://www.carikambing.com/image/og-image.jpeg</image:loc>
-      <image:caption>Tanupatra Farm - Kambing Aqiqah & Qurban</image:caption>
+      <image:caption>Tanupatra Farm - Kambing Aqiqah &amp; Qurban</image:caption>
     </image:image>
   </url>
 
@@ -53,4 +54,5 @@
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
+
 </urlset>
