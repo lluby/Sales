@@ -94,11 +94,7 @@ const Home = () => {
             dots={false}
           >
             <img
-              src="bg1.jpg"
-              className="w-full h-screen object-cover brightness-50"
-            />
-            <img
-              src="bg2.jpg"
+              src="/image/bg1.jpg"
               className="w-full h-screen object-cover brightness-50"
             />
           </Slider>
