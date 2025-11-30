@@ -24,37 +24,6 @@ const WA_NUMBER = "6281234567890"; // Ganti dengan nomor yang sesuai
 
 const packages = [
   {
-    title: "Paket Hemat",
-    subtitle: "20 Porsi (1 Kambing Betina)",
-    image: "aqiqah1.jpg",
-    portions: "20",
-    goat: "1 Ekor Kambing Betina",
-    items: ["Nasi putih", "Kerupuk", "Sendok", "Menu: Semur kambing"],
-    price: "2.000.000",
-    badge: "EKONOMIS",
-    popular: false,
-    rating: 4.7,
-    orders: "150+",
-  },
-  {
-    title: "Paket Standar",
-    subtitle: "30 Porsi (1 Kambing Jantan)",
-    image: "aqiqah1.jpg",
-    portions: "30",
-    goat: "1 Ekor Kambing Jantan",
-    items: [
-      "Nasi putih",
-      "Kerupuk",
-      "Buah pisang",
-      "Menu: Semur kambing + Bihun goreng",
-    ],
-    price: "2.500.000",
-    badge: "POPULER",
-    popular: true,
-    rating: 4.8,
-    orders: "280+",
-  },
-  {
     title: "Paket Favorit",
     subtitle: "40 Porsi (1 Kambing Jantan Besar)",
     image: "aqiqah1.jpg",
@@ -184,7 +153,7 @@ const Aqiqah = () => {
           <p className="text-lg mb-10 max-w-2xl mx-auto">
             Mulai dari{" "}
             <span className="text-yellow-300 font-black text-3xl">
-              Rp 2.000.000
+              Rp 4.500.000
             </span>
             <span className="ml-2">
               sudah termasuk kambing, masakan, dan perlengkapan lengkap
