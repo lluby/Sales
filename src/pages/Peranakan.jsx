@@ -30,7 +30,7 @@ const peranakans = [
     weight: "9-15kg",
     gender: "Jantan",
     description: "Postur besar dan sehat, siap jadi bibit unggul",
-    price: "350.000 - 750.000",
+    price: "1.000.000 - 2.500.000",
     age: "3 - 6 bulan",
     image: "anakanetawa.png",
     badge: "PREMIUM",
@@ -50,7 +50,7 @@ const peranakans = [
     weight: "8-15kg",
     gender: "Jantan",
     description: "Cepat besar, makan lahap, cocok untuk penggemukan",
-    price: "350.000 - 750.000",
+    price: "500.000 - 1.500.000",
     age: "3 - 6 bulan",
     image: "anakanrandu.png",
     badge: "BEST SELLER",
@@ -70,7 +70,7 @@ const peranakans = [
     weight: "7-11kg",
     gender: "Jantan",
     description: "Lincah, kuat, dan perawatan mudah",
-    price: "350.000 - 750.000",
+    price: "500.000 - 1.250.000",
     age: "3 - 6 bulan",
     image: "anakankacang.png",
     badge: "EKONOMIS",
@@ -90,7 +90,7 @@ const peranakans = [
     weight: "8-14kg",
     gender: "Jantan",
     description: "Bulu tebal, sehat, dan cepat naik bobot",
-    price: "350.000 - 750.000",
+    price: "350.000 - 900.000",
     age: "3 - 6 bulan",
     image: "anakandomba.png",
     badge: "POPULER",
@@ -153,7 +153,7 @@ const Peranakan = () => {
           <p className="text-lg mb-10 max-w-2xl mx-auto">
             Investasi mulai{" "}
             <span className="text-yellow-300 font-black text-3xl">
-              Rp 300.000
+              Rp 350.000
             </span>
             <span className="ml-2">
               bisa berkembang hingga 200-250% dalam 6-12 bulan!

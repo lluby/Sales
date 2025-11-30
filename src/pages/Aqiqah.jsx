@@ -30,7 +30,7 @@ const packages = [
     portions: "20",
     goat: "1 Ekor Kambing Betina",
     items: ["Nasi putih", "Kerupuk", "Sendok", "Menu: Semur kambing"],
-    price: "1.800.000",
+    price: "2.000.000",
     badge: "EKONOMIS",
     popular: false,
     rating: 4.7,
@@ -48,7 +48,7 @@ const packages = [
       "Buah pisang",
       "Menu: Semur kambing + Bihun goreng",
     ],
-    price: "2.300.000",
+    price: "2.500.000",
     badge: "POPULER",
     popular: true,
     rating: 4.8,
@@ -67,7 +67,7 @@ const packages = [
       "Kartu ucapan",
       "Menu: Sambel goreng kambing + Bihun goreng + Telor rebus",
     ],
-    price: "2.900.000",
+    price: "4.500.000",
     badge: "BEST SELLER",
     popular: true,
     rating: 4.9,
@@ -88,7 +88,7 @@ const packages = [
       "Box 22x22 cm",
       "Menu: Semur + Tongseng + Mie goreng",
     ],
-    price: "3.900.000",
+    price: "5.500.000",
     badge: "TERLARIS",
     popular: true,
     rating: 4.9,
@@ -109,7 +109,7 @@ const packages = [
       "Box premium",
       "Menu: Semur + Gulai + Telor pindang",
     ],
-    price: "4.700.000",
+    price: "6.000.000",
     badge: "PREMIUM",
     popular: false,
     rating: 4.8,
@@ -131,7 +131,7 @@ const packages = [
       "Minuman botol",
       "Menu: Semur premium + Tongseng spesial + Bihun goreng premium",
     ],
-    price: "5.900.000",
+    price: "7.500.000",
     badge: "VIP",
     popular: false,
     rating: 5.0,
@@ -184,7 +184,7 @@ const Aqiqah = () => {
           <p className="text-lg mb-10 max-w-2xl mx-auto">
             Mulai dari{" "}
             <span className="text-yellow-300 font-black text-3xl">
-              Rp 1.800.000
+              Rp 2.000.000
             </span>
             <span className="ml-2">
               sudah termasuk kambing, masakan, dan perlengkapan lengkap

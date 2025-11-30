@@ -29,8 +29,8 @@ const kambings = [
     weight: "25-30kg",
     gender: "Jantan",
     description: "Siap qurban: tubuh besar, sehat, dan memenuhi syarat syar'i",
-    price: "Rp 1.500.000 - Rp 7.500.000",
-    age: "1,7 tahun",
+    price: "Rp 5.000.000 - Rp 7.500.000",
+    age: "< 2 tahun",
     image: "etawa.png",
     badge: "PREMIUM",
     sold: "180+",
@@ -48,8 +48,8 @@ const kambings = [
     weight: "20-25kg",
     gender: "Jantan",
     description: "Ideal untuk qurban: bobot mantap, aktif, dan pakan terawat",
-    price: "Rp 750.000 - Rp 2.500.000",
-    age: "1,5 tahun",
+    price: "Rp 3.500.000 - Rp 5.000.000",
+    age: "< 2 tahun",
     image: "jawarandu.png",
     badge: "BEST SELLER",
     sold: "320+",
@@ -67,8 +67,8 @@ const kambings = [
     weight: "28-32kg",
     gender: "Jantan",
     description: "Cocok qurban: sehat, lincah, dan kualitas tubuh terjamin",
-    price: "Rp 500.000 - Rp 3.000.000",
-    age: "2 tahun",
+    price: "Rp 3.000.000 - Rp 4.500.000",
+    age: "< 2 tahun",
     image: "jawakacang.png",
     badge: "POPULER",
     sold: "240+",
@@ -86,8 +86,8 @@ const kambings = [
     weight: "26-30kg",
     gender: "Jantan",
     description: "Layak qurban: bulu tebal, sehat, dan bobot stabil",
-    price: "Rp 500.000 - Rp 3.000.000",
-    age: "1,8 tahun",
+    price: "Rp 2.500.000 - Rp 4.000.000",
+    age: "< 2 tahun",
     image: "domba.png",
     badge: "BERKAH",
     sold: "160+",
@@ -148,7 +148,7 @@ const Qurban = () => {
           <p className="text-lg mb-10 max-w-2xl mx-auto">
             Mulai dari{" "}
             <span className="text-yellow-300 font-black text-3xl">
-              Rp 500.000
+              Rp 2.500.000
             </span>
             <span className="ml-2">
               sudah bisa beribadah qurban dengan tenang
