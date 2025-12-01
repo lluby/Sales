@@ -15,6 +15,14 @@ const Gallery = () => {
       type: "video",
       src: "https://ik.imagekit.io/purnomo/WhatsApp%20Video%202025-11-24%20at%2016.38.04.mp4",
     },
+    {
+      type: "video",
+      src: "https://ik.imagekit.io/purnomo/WhatsApp%20Video%202025-12-01%20at%2019.32.51.mp4",
+    },
+    {
+      type: "image",
+      src: "https://ik.imagekit.io/purnomo/WhatsApp%20Image%202025-11-24%20at%2016.25.26.jpeg?updatedAt=1764430479591",
+    },
   ];
 
   return (
