@@ -35,9 +35,9 @@ const Contact = () => {
     address:
       "RT 06/01 Desa Bangsa, Kec. Kebasen, Kab. Banyumas, Prov. Jawa Tengah",
     hours: "Setiap Hari: 06.00 - 20.00 WIB",
-    copyright: "© 2025 Tanupatra Farm. All rights reserved.",
+    copyright: "© 2025 Patra Farm. All rights reserved.",
     instagram: "@tanupatrafarm",
-    facebook: "Tanupatra Farm",
+    facebook: "Patra Farm",
   };
 
   const waLink = `https://wa.me/${contact.number}?text=${waMessage}`;
@@ -389,7 +389,7 @@ const Contact = () => {
         {/* Footer */}
         <div className="text-center mt-16 pt-8 border-t-2 border-gray-200">
           <p className="text-gray-600 font-medium mb-2">
-            Tanupatra Farm - Peternakan Kambing Terpercaya
+            Patra Farm - Peternakan Kambing Terpercaya
           </p>
           <p className="text-gray-500 text-sm">{contact.copyright}</p>
         </div>

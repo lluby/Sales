@@ -47,7 +47,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto flex justify-between items-center px-4 py-3">
         <a href="/" className="text-3xl font-bold">
-          Tanupatra Farm
+          Patra Farm
         </a>
         <ul className="hidden md:flex space-x-8 items-center text-m font-semibold">
           <li>
