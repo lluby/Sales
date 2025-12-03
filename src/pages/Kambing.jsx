@@ -9,8 +9,7 @@ import {
 } from "react-icons/fa";
 import { Award, Heart, TrendingUp, Users } from "lucide-react";
 import Navbar from "../components/Navbar";
-
-const WA_NUMBER = "6281234567890"; // Ganti dengan nomor yang sesuai
+import { WA_NUMBER } from "../config";
 
 const kambings = [
   {

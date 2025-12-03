@@ -281,7 +281,7 @@ const Home = () => {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-16 md:py-24 bg-white text-center">
+      {/* <section className="py-16 md:py-24 bg-white text-center">
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-12">
             <p className="text-yellow-600 font-bold text-sm md:text-base uppercase tracking-wider mb-3">
@@ -301,7 +301,7 @@ const Home = () => {
           </div>
           <TestimonialCarousel />
         </div>
-      </section>
+      </section> */}
 
       <Gallery />
 

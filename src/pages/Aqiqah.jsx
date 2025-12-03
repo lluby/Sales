@@ -19,8 +19,7 @@ import {
   Package,
 } from "lucide-react";
 import Navbar from "../components/Navbar";
-
-const WA_NUMBER = "6281234567890";
+import { WA_NUMBER } from "../config";
 
 const packages = [
   {
